@@ -1,25 +1,20 @@
 import booksRepository from "./Books.repository";
 
 export default class BooksController {
-  constructor(store) {
+  constructor(store, user) {
     this.store = store;
+    this.user = user;
   }
 
   async loadBooks() {
-    this.store.setLoading(true);
-    try {
-      const books = await booksRepository.getBooks();
-      this.store.setBooks(books);
-    } finally {
-      this.store.setLoading(false);
-    }
+    const books = await booksRepository.getBooks(this.user);
+    this.store.setBooks(books);
   }
-
-  async addBook({ name, author }) {
-    const success = await booksRepository.addBook({ name, author });
+  
+  async addBook(book) {
+    const success = await booksRepository.addBook(this.user, book);
     if (success) {
-      // just add locally; in real apps you'd re-fetch
-      this.store.addBook({ name, author, private: false }); 
+      await this.loadBooks(); // safer approach
     }
   }
 

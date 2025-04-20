@@ -4,7 +4,7 @@ import BooksStore from "../Stores/BooksStore";
 import BooksController from "../Books/Books.controller";
 
 const store = new BooksStore();
-const controller = new BooksController(store);
+const controller = new BooksController(store, "postnikov"); 
 
 const BooksView = observer(() => {
   const [newBook, setNewBook] = useState({ name: "", author: "" });

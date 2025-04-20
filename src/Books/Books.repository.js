@@ -5,13 +5,13 @@ class BooksRepository {
     this.httpGateway = new ApiGateway();
   }
 
-  getBooks = async () => {
-    const booksDto = await this.httpGateway.get("/");
+  getBooks = async (user) => {
+    const booksDto = await this.httpGateway.get(`/${user}/`);
     return booksDto;
   };
 
-  addBook = async ({ name, author }) => {
-    const bookAddDto = await this.httpGateway.post("/books", { name, author });
+  addBook = async (user, { name, author }) => {
+    const bookAddDto = await this.httpGateway.post(`/${user}/`, { name, author });
     return bookAddDto && bookAddDto.status === "ok" ? true : false;
   };
 }
