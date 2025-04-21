@@ -17,4 +17,10 @@ export default class ApiGateway {
     const dto = response.json();
     return dto;
   };
+  put = async (path) => {
+    const response = await fetch(`${API_BASE}${path}`, {
+      method: "PUT"
+    });
+    return response.json();
+  };
 }

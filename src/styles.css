@@ -1,8 +1,61 @@
-.App {
-  font-family: arial;
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-body {
-  font-family: arial;
+.BooksView {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px;
+  text-align: left;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-radius: 8px;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  padding: 12px;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+button {
+  padding: 6px 12px;
+  margin: 8px 4px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+input[type="text"] {
+  padding: 6px;
+  margin: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 45%;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  background: #f1f1f1;
+  margin: 6px 0;
+  padding: 8px 12px;
+  border-radius: 4px;
 }
