@@ -26,20 +26,23 @@ Designed for **testability**, **clarity**, and **maintainability**.
 
 ### 1. Clone the repository
 
-<pre>```bash git clone https://github.com/ItayGold/ReaktivateTDD.git```</pre>
+<pre>
+  git clone https://github.com/ItayGold/ReaktivateTDD.git
+  cd ReaktivateTDD
+</pre>
 
 ### 2. Install dependencies
-<pre> ```bash npm install ``` </pre>
+<pre>npm install</pre>
 
 If you face dependency conflicts:
-<pre> ```bash npm install --legacy-peer-deps ``` </pre>
+<pre>npm install --legacy-peer-deps</pre>
 
 ### 3. Run the app
-<pre> ```bash npm start ``` </pre>
+<pre>npm start</pre>
 Then open your browser at: http://localhost:3000
 
 ## 🧪 Running Tests
-<pre> ```bash npm run test ``` </pre>
+<pre>npm run test</pre>
 Tests cover logic in BooksController
 
 🙌 Author
